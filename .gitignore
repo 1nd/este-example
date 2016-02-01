@@ -1,6 +1,7 @@
 # Este
 #
 *.sublime-workspace
+*.sublime-project
 
 # OSX
 #
