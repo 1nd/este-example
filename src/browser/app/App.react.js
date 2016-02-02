@@ -24,13 +24,14 @@ class App extends Component {
       <div className="page" data-pathname={pathname}>
         <Helmet
           link={[
-            {rel: 'shortcut icon', href: require('./favicon.ico')}
+            {rel: 'shortcut icon', href: require('./favicon.ico')},
+            {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css'}
           ]}
           meta={[{
             name: 'description',
             content: 'Dev stack and starter kit for functional and universal React web apps'
           }]}
-          titleTemplate="%s - Este.js"
+          titleTemplate="%s - Trying Este.js"
         />
         {/* Pathname enforces rerender so activeClassName is updated. */}
         <Header msg={msg} pathname={pathname} viewer={viewer} />

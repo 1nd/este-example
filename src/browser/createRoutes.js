@@ -7,6 +7,7 @@ import Profile from './me/Profile.react';
 import React from 'react';
 import Settings from './me/Settings.react';
 import Todos from './todos/Page.react';
+import TryFoundation from './try-foundation/Page.react'
 import {IndexRoute, Route} from 'react-router';
 
 export default function createRoutes(getState) {
@@ -30,6 +31,7 @@ export default function createRoutes(getState) {
         <Route component={Settings} path="settings" />
       </Route>
       <Route component={Todos} path="todos" />
+      <Route component={TryFoundation} path="try-foundation" />
       <Route component={NotFound} path="*" />
     </Route>
   );

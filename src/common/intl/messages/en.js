@@ -7,7 +7,8 @@ export default {
       home: 'Home',
       login: 'Login',
       me: 'Me (protected)',
-      todos: 'Todos'
+      todos: 'Todos',
+      "try-foundation": 'Try Foundation 6'
     }
   },
   auth: {
@@ -99,5 +100,8 @@ export default {
   },
   settings: {
     title: 'Settings'
+  },
+  "try-foundation": {
+    title: 'Trying Foundation 6'
   }
 };
