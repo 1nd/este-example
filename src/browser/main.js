@@ -13,6 +13,9 @@ import {browserHistory} from 'react-router';
 // http://bluebirdjs.com/docs/why-bluebird.html
 window.Promise = Bluebird;
 
+// Load Foundation v6
+require('foundation-sites/dist/foundation.css')
+
 const app = document.getElementById('app');
 const initialState = window.__INITIAL_STATE__;
 const store = configureStore({initialState});

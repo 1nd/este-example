@@ -24,8 +24,7 @@ class App extends Component {
       <div className="page" data-pathname={pathname}>
         <Helmet
           link={[
-            {rel: 'shortcut icon', href: require('./favicon.ico')},
-            {rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css'}
+            {rel: 'shortcut icon', href: require('./favicon.ico')}
           ]}
           meta={[{
             name: 'description',
