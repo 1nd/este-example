@@ -1,0 +1,105 @@
+@import '~foundation-sites/scss/util/_util';
+// Global variables and styles
+@import '~foundation-sites/scss/global';
+
+// ========================
+// Set Foundation settings
+// ========================
+// Default settings: foundation-sites/scss/settings/_settings
+
+$global-font-size: 16px;
+$primary-color: goldenrod;
+// Round number to nearest whole number to prevent browser bug due to fractional pixel
+$header-sizes: (
+  small: (
+    'h1': round(1.5 * $global-font-size),
+    'h2': round(1.4 * $global-font-size),
+    'h3': round(1.3 * $global-font-size),
+    'h4': round(1.2 * $global-font-size),
+    'h5': round(1.1 * $global-font-size),
+    'h6': 1rem,
+  ),
+  medium: (
+    'h1': 3rem,
+    'h2': round(2.5 * $global-font-size),
+    'h3': 2rem,
+    'h4': round(1.5 * $global-font-size),
+    'h5': round(1.25 * $global-font-size),
+    'h6': 1rem,
+  ),
+);
+$input-error-font-size: max(14px, round(0.75 * $global-font-size) * 1); // Multiply by 1 to give it unit (px)
+
+// ==============================
+// Include Foundation components
+// ==============================
+
+@import '~foundation-sites/scss/grid/grid';
+@import '~foundation-sites/scss/typography/typography';
+@import '~foundation-sites/scss/components/button';
+@import '~foundation-sites/scss/forms/forms';
+// @import '~foundation-sites/scss/components/button-group';
+// @import '~foundation-sites/scss/components/visibility';
+// @import '~foundation-sites/scss/components/float';
+// @import '~foundation-sites/scss/components/accordion';
+// @import '~foundation-sites/scss/components/accordion-menu';
+// @import '~foundation-sites/scss/components/badge';
+// @import '~foundation-sites/scss/components/breadcrumbs';
+// @import '~foundation-sites/scss/components/callout';
+// @import '~foundation-sites/scss/components/close-button';
+// @import '~foundation-sites/scss/components/drilldown';
+// @import '~foundation-sites/scss/components/dropdown-menu';
+// @import '~foundation-sites/scss/components/dropdown';
+// @import '~foundation-sites/scss/components/flex-video';
+// @import '~foundation-sites/scss/components/label';
+// @import '~foundation-sites/scss/components/media-object';
+// @import '~foundation-sites/scss/components/menu';
+// @import '~foundation-sites/scss/components/off-canvas';
+// @import '~foundation-sites/scss/components/orbit';
+// @import '~foundation-sites/scss/components/pagination';
+// @import '~foundation-sites/scss/components/progress-bar';
+// @import '~foundation-sites/scss/components/reveal';
+// @import '~foundation-sites/scss/components/slider';
+// @import '~foundation-sites/scss/components/sticky';
+// @import '~foundation-sites/scss/components/switch';
+@import '~foundation-sites/scss/components/table';
+// @import '~foundation-sites/scss/components/tabs';
+// @import '~foundation-sites/scss/components/thumbnail';
+// @import '~foundation-sites/scss/components/title-bar';
+// @import '~foundation-sites/scss/components/tooltip';
+// @import '~foundation-sites/scss/components/top-bar';
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-button-group;
+// @include foundation-visibility-classes;
+// @include foundation-float-classes;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-menu;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-reveal;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-switch;
+@include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+// @include foundation-tooltip;
+// @include foundation-top-bar;
