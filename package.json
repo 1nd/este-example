@@ -13,7 +13,8 @@
     "test": "gulp test"
   },
   "engines": {
-    "node": "5.5.0"
+    "node": "5.5.0",
+    "npm": "3.3.12"
   },
   "dependencies": {
     "autoprefixer": "^6.1.0",
@@ -113,5 +114,6 @@
     "webpack-hot-middleware": "^2.1.0",
     "webpack-isomorphic-tools": "^2.2.24",
     "yargs": "^3.3.1"
-  }
+  },
+  "devDependencies": {}
 }
