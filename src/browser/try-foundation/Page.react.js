@@ -15,6 +15,7 @@ export default class Page extends Component {
         <Helmet title={msg.title} />
         <div>Try to use Foundation for Sites ver. 6 with Este</div>
         <button className="primary button" type="button">Ini contoh tombol</button>
+        <div className="form-error is-visible"> Contoh pesan error pada input form</div>
       </div>
     )
   }
