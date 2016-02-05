@@ -11,6 +11,9 @@ import {Provider} from 'react-redux';
 import {RouterContext, match} from 'react-router';
 import {createMemoryHistory} from 'react-router';
 
+/**
+* Fetch component data asynchronously by awaiting for component "promises"
+*/
 const fetchComponentDataAsync = async (dispatch, renderProps) => {
   const {components, location, params} = renderProps;
   const promises = components
@@ -25,6 +28,9 @@ const fetchComponentDataAsync = async (dispatch, renderProps) => {
   await Promise.all(promises);
 };
 
+/**
+* HTML of web app to be put inside <body>
+*/
 const getAppHtml = (store, renderProps) =>
   ReactDOMServer.renderToString(
     <Provider store={store}>
@@ -34,6 +40,9 @@ const getAppHtml = (store, renderProps) =>
     </Provider>
   );
 
+/**
+* HTML's <script> tag as part of web app's HTML
+*/
 const getScriptHtml = (state, headers, hostname, appJsFilename) =>
   // Note how app state is serialized. JSON.stringify is anti-pattern.
   // https://github.com/yahoo/serialize-javascript#user-content-automatic-escaping-of-html-characters
@@ -46,6 +55,9 @@ const getScriptHtml = (state, headers, hostname, appJsFilename) =>
     <script src="${appJsFilename}"></script>
   `;
 
+/**
+* A.K.A. create the HTML of the page
+*/
 const renderPage = (store, renderProps, req) => {
   const state = store.getState();
   const {headers, hostname} = req;
