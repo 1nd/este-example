@@ -1,7 +1,3 @@
-@import '~foundation-sites/scss/util/_util';
-// Global variables and styles
-@import '~foundation-sites/scss/global';
-
 // ========================
 // Set Foundation settings
 // ========================
@@ -33,6 +29,10 @@ $input-error-font-size: max(14px, round(0.75 * $global-font-size) * 1); // Multi
 // ==============================
 // Include Foundation components
 // ==============================
+
+@import '~foundation-sites/scss/util/_util';
+// Global variables and styles
+@import '~foundation-sites/scss/global';
 
 @import '~foundation-sites/scss/grid/grid';
 @import '~foundation-sites/scss/typography/typography';
