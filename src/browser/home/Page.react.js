@@ -16,29 +16,11 @@ export default class Page extends Component {
     const {msg: {home: msg}} = this.props;
 
     return (
-      <div className="home-page">
+      <div className="home-page row">
         <Helmet title={msg.title} />
-        <p>
-          <FormattedHTMLMessage defaultMessage={msg.infoHtml} />
-        </p>
-        <div className="tocheck">
-          <h2>{msg.toCheck.h2}</h2>
+        <div className="tocheck small-12 column">
           {/* Note require usage for image source. Very useful for CDN. */}
           <img alt="50x50 placeholder" src={require('./50x50.png')} />
-          <ul>
-            {msg.toCheck.list.map(({key, text}) =>
-              <li key={key}>
-                <FormattedHTMLMessage defaultMessage={text} />
-              </li>
-            )}
-            <li>
-              {msg.toCheck.isomorphicPage}{' '}
-              <Link to="/this-is-not-the-web-page-you-are-looking-for">404</Link>
-            </li>
-            <li>
-              {msg.toCheck.andMuchMore}
-            </li>
-          </ul>
         </div>
       </div>
     );

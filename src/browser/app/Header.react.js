@@ -14,18 +14,19 @@ export default class Header extends Component {
     const {msg: {app: {links: msg}}, viewer} = this.props;
 
     return (
-      <header>
-        <h1>
+      <header className="row align-middle">
+        <h1 className="shrink column">
           <Link to="/">{msg.home}</Link>
         </h1>
-        <ul>
-          <li><Link activeClassName="active" to="/try-foundation">{msg["try-foundation"]}</Link></li>
-          <li><Link activeClassName="active" to="/todos">{msg.todos}</Link></li>
-          <li><Link activeClassName="active" to="/me">{msg.me}</Link></li>
-          {!viewer &&
-            <li><Link activeClassName="active" to="/login">{msg.login}</Link></li>
-          }
-        </ul>
+        <nav className="column">
+          <ul className="menu">
+            <li><Link activeClassName="active" to="/todos">{msg.todos}</Link></li>
+            <li><Link activeClassName="active" to="/account">{msg.account}</Link></li>
+            {!viewer &&
+              <li><Link activeClassName="active" to="/sign_in">{msg.login}</Link></li>
+            }
+          </ul>
+        </nav>
       </header>
     );
   }

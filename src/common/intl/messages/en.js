@@ -1,35 +1,38 @@
+const login = {"defaultCase": "sign in", "titleCase": "Sign In"}
+const register = {"defaultCase": "register", "titleCase": "Register"}
+
 export default {
   app: {
     footer: {
-      madeByHtml: 'made by <a href="https://twitter.com/steida">steida</a>'
+      madeByHtml: 'Copyright &copy; 2016 HijUp.com'
     },
     links: {
-      home: 'Home',
-      login: 'Login',
-      me: 'Me (protected)',
+      home: 'HijUp',
+      login: login.titleCase,
       todos: 'Todos',
-      "try-foundation": 'Try Foundation 6'
+      account: 'Your account'
     }
   },
   auth: {
     form: {
       button: {
-        login: 'Login',
-        signup: 'Sign up'
+        login: login.titleCase,
+        register: register.titleCase
       },
       hint: 'Hint: pass1',
-      legend: 'Login / Sign Up',
+      legend: `${login.titleCase} / ${register.titleCase}`,
       placeholder: {
         email: 'your@email.com',
         password: 'password'
       },
+      rememberMe: 'Remember me',
       wrongPassword: 'Wrong password.'
     },
     logout: {
       button: 'Logout'
     },
     login: {
-      title: 'Login'
+      title: login.titleCase
     },
     validation: {
       email: 'Email address is not valid.',
@@ -44,37 +47,12 @@ export default {
   home: {
     // // TODO: Android text.
     // androidInfoText: ``,
-    infoHtml: '<a href="https://github.com/este/este">Este.js</a> dev stack.',
     iosInfoText: `
       Este.js dev stack
       Press CMD+R to reload
       Press CMD+D for debug menu
     `,
-    title: 'Este.js',
-    toCheck: {
-      andMuchMore: 'And much more :-)',
-      h2: 'Things to Check',
-      isomorphicPage: 'Isomorphic page',
-      // This is example of localized ordered list.
-      list: [
-        {
-          key: 'source',
-          text: 'Server rendering'
-        },
-        {
-          key: 'development',
-          text: 'Hot reload for styles, components, etc.'
-        },
-        {
-          key: 'production',
-          text: 'Performance and size of production build (<code>gulp -p</code>)'
-        }
-      ]
-    }
-  },
-  me: {
-    title: 'Me',
-    welcome: 'Hi {email}. This is your secret page.'
+    title: 'Home' // Required by React Helmet
   },
   notFound: {
     continueMessage: 'Continue here please.',
@@ -95,13 +73,8 @@ export default {
     newTodoPlaceholder: 'What needs to be done?',
     title: 'Todos'
   },
-  profile: {
-    title: 'Profile'
-  },
-  settings: {
-    title: 'Settings'
-  },
-  "try-foundation": {
-    title: 'Trying Foundation 6'
+  account: {
+    title: 'Account',
+    welcome: 'Hi {email}. This is your account page.'
   }
 };

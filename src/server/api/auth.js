@@ -2,7 +2,7 @@ import express from 'express';
 
 const router = express.Router();
 
-router.route('/login')
+router.route('/sign_in')
   .post((req, res) => {
 
     const {email, password} = req.body;

@@ -18,6 +18,12 @@ class App extends Component {
 
   render() {
     const {location: {pathname}, msg, users: {viewer}} = this.props;
+    let titleTemplate
+    if (pathname === '/') {
+      titleTemplate = "HijUp.com"
+    } else {
+      titleTemplate = "%s \u00b7 Hijup.com"
+    }
 
     return (
       // Pass data-pathname to allow route specific styling.
@@ -30,7 +36,7 @@ class App extends Component {
             name: 'description',
             content: 'Dev stack and starter kit for functional and universal React web apps'
           }]}
-          titleTemplate="%s - Trying Este.js"
+          titleTemplate={titleTemplate}
         />
         {/* Pathname enforces rerender so activeClassName is updated. */}
         <Header msg={msg} pathname={pathname} viewer={viewer} />

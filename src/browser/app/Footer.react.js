@@ -12,8 +12,8 @@ export default class Footer extends Component {
     const {msg} = this.props;
 
     return (
-      <footer>
-        <p>
+      <footer className="row">
+        <p className="small-12 column">
           <FormattedHTMLMessage defaultMessage={msg.madeByHtml} />
         </p>
       </footer>

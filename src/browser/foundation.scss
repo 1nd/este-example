@@ -53,7 +53,7 @@ $input-error-font-size: max(14px, round(0.75 * $global-font-size) * 1); // Multi
 @import '~foundation-sites/scss/forms/forms';
 // @import '~foundation-sites/scss/components/label';
 // @import '~foundation-sites/scss/components/media-object';
-// @import '~foundation-sites/scss/components/menu';
+@import '~foundation-sites/scss/components/menu';
 // @import '~foundation-sites/scss/components/off-canvas';
 // @import '~foundation-sites/scss/components/orbit';
 // @import '~foundation-sites/scss/components/pagination';
@@ -88,7 +88,7 @@ $input-error-font-size: max(14px, round(0.75 * $global-font-size) * 1); // Multi
 @include foundation-forms;
 // @include foundation-label;
 // @include foundation-media-object;
-// @include foundation-menu;
+@include foundation-menu;
 // @include foundation-off-canvas;
 // @include foundation-orbit;
 // @include foundation-pagination;

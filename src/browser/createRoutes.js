@@ -1,13 +1,10 @@
 import App from './app/App.react';
+import NotFound from './notfound/Page.react';
 import Auth from './auth/Page.react';
 import Home from './home/Page.react';
-import Me from './me/Page.react';
-import NotFound from './notfound/Page.react';
-import Profile from './me/Profile.react';
+import Account from './account/Account.react';
 import React from 'react';
-import Settings from './me/Settings.react';
 import Todos from './todos/Page.react';
-import TryFoundation from './try-foundation/Page.react'
 import {IndexRoute, Route} from 'react-router';
 
 export default function createRoutes(getState) {
@@ -16,7 +13,7 @@ export default function createRoutes(getState) {
     const loggedInUser = getState().users.viewer;
     if (!loggedInUser) {
       replace({
-        pathname: '/login',
+        pathname: '/sign_in',
         state: {nextPathname: nextState.location.pathname}
       });
     }
@@ -25,13 +22,11 @@ export default function createRoutes(getState) {
   return (
     <Route component={App} path="/">
       <IndexRoute component={Home} />
-      <Route component={Auth} path="login" />
-      <Route component={Me} onEnter={requireAuth} path="me">
-        <Route component={Profile} path="profile" />
-        <Route component={Settings} path="settings" />
+      <Route component={Auth} path="sign_in" />
+      <Route onEnter={requireAuth}>
+        <Route component={Account} path="account" />
       </Route>
       <Route component={Todos} path="todos" />
-      <Route component={TryFoundation} path="try-foundation" />
       <Route component={NotFound} path="*" />
     </Route>
   );
