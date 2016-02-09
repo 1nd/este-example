@@ -48,27 +48,35 @@ class Login extends Component {
     const {email, password} = fields;
 
     return (
-      <div className="login">
-        <Helmet title="Login" />
-        <form onSubmit={this.onFormSubmit}>
-          <fieldset disabled={auth.formDisabled}>
-            <legend>{msg.auth.form.legend}</legend>
-            <input
-              autoFocus
-              maxLength="100"
-              placeholder={msg.auth.form.placeholder.email}
-              {...email}
-            />
-            <br />
-            <input
-              maxLength="300"
-              placeholder={msg.auth.form.placeholder.password}
-              type="password"
-              {...password}
-            />
-            <br />
-            <button type="submit">{msg.auth.form.button.login}</button>
-            <span className="hint">{msg.auth.form.hint}</span>
+      <div className="login row">
+        <Helmet />
+        <form className="small-12 medium-6 large-4 column" onSubmit={this.onFormSubmit}>
+          <fieldset className="fieldset row" disabled={auth.formDisabled}>
+            <legend className="small-12 column">{msg.auth.form.legend}</legend>
+            <div className="small-12 column">
+              <input
+                type="email"
+                autoFocus
+                maxLength="100"
+                placeholder={msg.auth.form.placeholder.email}
+                {...email}
+              />
+            </div>
+            <div className="small-12 column">
+              <input
+                type="password"
+                maxLength="300"
+                placeholder={msg.auth.form.placeholder.password}
+                {...password}
+              />
+            </div>
+            <label className="small-12 column"><input
+              type="checkbox"
+            />{msg.auth.form.rememberMe}</label>
+            <div className="shrink column">
+              <button type="submit" className="primary button">{msg.auth.form.button.login}</button>
+            </div>
+            <span className="hint small-12 column">{msg.auth.form.hint}</span>
             {auth.formError &&
               <p className="error-message">{auth.formError.message}</p>
             }
